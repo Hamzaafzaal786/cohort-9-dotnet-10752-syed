@@ -1,0 +1,11 @@
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\bin\Debug\net7.0\TaskManagementSystem.Domain.deps.json
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\bin\Debug\net7.0\TaskManagementSystem.Domain.dll
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\bin\Debug\net7.0\TaskManagementSystem.Domain.pdb
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\obj\Debug\net7.0\TaskManagementSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\obj\Debug\net7.0\TaskManagementSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\obj\Debug\net7.0\TaskManagementSystem.Domain.AssemblyInfo.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\obj\Debug\net7.0\TaskManagementSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\obj\Debug\net7.0\TaskManagementSystem.Domain.dll
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\obj\Debug\net7.0\refint\TaskManagementSystem.Domain.dll
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\obj\Debug\net7.0\TaskManagementSystem.Domain.pdb
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\obj\Debug\net7.0\ref\TaskManagementSystem.Domain.dll

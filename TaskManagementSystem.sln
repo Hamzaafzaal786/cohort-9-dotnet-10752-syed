@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4DAF24FC-F4A2-49B4-B67E-DB1FEDD48517}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementSystem.Domain", "src\TaskManagementSystem.Domain\TaskManagementSystem.Domain.csproj", "{32BDB436-4CF2-4B6B-AD26-F59846B4F08E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementSystem.Application", "src\TaskManagementSystem.Application\TaskManagementSystem.Application.csproj", "{696B7A17-A220-4373-BA86-3C557AB9A6FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementSystem.Infrastructure", "src\TaskManagementSystem.Infrastructure\TaskManagementSystem.Infrastructure.csproj", "{6036C1B1-CA0B-4324-8C61-2BE0DD7BE18D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementSystem.API", "src\TaskManagementSystem.API\TaskManagementSystem.API.csproj", "{126C881E-8B6B-40E1-8827-0A101BD7AA86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E653CB61-616C-42F7-A42E-DDFB6962F4AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementSystem.UnitTests", "tests\TaskManagementSystem.UnitTests\TaskManagementSystem.UnitTests.csproj", "{4743DD0F-7713-4541-B44A-18B603B2DE49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementSystem.IntegrationTests", "tests\TaskManagementSystem.IntegrationTests\TaskManagementSystem.IntegrationTests.csproj", "{47F55CF8-26F4-4CF2-8508-E6BADDE21E38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32BDB436-4CF2-4B6B-AD26-F59846B4F08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32BDB436-4CF2-4B6B-AD26-F59846B4F08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32BDB436-4CF2-4B6B-AD26-F59846B4F08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32BDB436-4CF2-4B6B-AD26-F59846B4F08E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{696B7A17-A220-4373-BA86-3C557AB9A6FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{696B7A17-A220-4373-BA86-3C557AB9A6FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{696B7A17-A220-4373-BA86-3C557AB9A6FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{696B7A17-A220-4373-BA86-3C557AB9A6FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6036C1B1-CA0B-4324-8C61-2BE0DD7BE18D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6036C1B1-CA0B-4324-8C61-2BE0DD7BE18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6036C1B1-CA0B-4324-8C61-2BE0DD7BE18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6036C1B1-CA0B-4324-8C61-2BE0DD7BE18D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{126C881E-8B6B-40E1-8827-0A101BD7AA86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{126C881E-8B6B-40E1-8827-0A101BD7AA86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{126C881E-8B6B-40E1-8827-0A101BD7AA86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{126C881E-8B6B-40E1-8827-0A101BD7AA86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4743DD0F-7713-4541-B44A-18B603B2DE49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4743DD0F-7713-4541-B44A-18B603B2DE49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4743DD0F-7713-4541-B44A-18B603B2DE49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4743DD0F-7713-4541-B44A-18B603B2DE49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47F55CF8-26F4-4CF2-8508-E6BADDE21E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47F55CF8-26F4-4CF2-8508-E6BADDE21E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47F55CF8-26F4-4CF2-8508-E6BADDE21E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47F55CF8-26F4-4CF2-8508-E6BADDE21E38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{32BDB436-4CF2-4B6B-AD26-F59846B4F08E} = {4DAF24FC-F4A2-49B4-B67E-DB1FEDD48517}
+		{696B7A17-A220-4373-BA86-3C557AB9A6FB} = {4DAF24FC-F4A2-49B4-B67E-DB1FEDD48517}
+		{6036C1B1-CA0B-4324-8C61-2BE0DD7BE18D} = {4DAF24FC-F4A2-49B4-B67E-DB1FEDD48517}
+		{126C881E-8B6B-40E1-8827-0A101BD7AA86} = {4DAF24FC-F4A2-49B4-B67E-DB1FEDD48517}
+		{4743DD0F-7713-4541-B44A-18B603B2DE49} = {E653CB61-616C-42F7-A42E-DDFB6962F4AA}
+		{47F55CF8-26F4-4CF2-8508-E6BADDE21E38} = {E653CB61-616C-42F7-A42E-DDFB6962F4AA}
+	EndGlobalSection
+EndGlobal
