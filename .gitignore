@@ -1,0 +1,55 @@
+# Build outputs
+**/bin/
+**/obj/
+*.dll
+*.exe
+*.pdb
+
+# NuGet
+**/packages/
+*.nupkg
+*.snupkg
+*.nuget.props
+*.nuget.targets
+
+# User-specific files
+*.user
+*.suo
+*.sln.docstates
+
+# Visual Studio
+.vs/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+
+# Publish
+/publish/
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Node.js (for React)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+
+# OS generated
+.DS_Store
+Thumbs.db

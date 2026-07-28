@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\TaskManagementSystem.API.props" />
-</Project>

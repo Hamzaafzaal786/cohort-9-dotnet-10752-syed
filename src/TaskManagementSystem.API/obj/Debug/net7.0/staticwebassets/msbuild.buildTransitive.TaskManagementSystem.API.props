@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\TaskManagementSystem.API.props" />
-</Project>
