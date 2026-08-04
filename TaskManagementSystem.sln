@@ -5,27 +5,29 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4DAF24FC-F4A2-49B4-B67E-DB1FEDD48517}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementSystem.Domain", "src\TaskManagementSystem.Domain\TaskManagementSystem.Domain.csproj", "{32BDB436-4CF2-4B6B-AD26-F59846B4F08E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagementSystem.Domain", "src\TaskManagementSystem.Domain\TaskManagementSystem.Domain.csproj", "{32BDB436-4CF2-4B6B-AD26-F59846B4F08E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementSystem.Application", "src\TaskManagementSystem.Application\TaskManagementSystem.Application.csproj", "{696B7A17-A220-4373-BA86-3C557AB9A6FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagementSystem.Application", "src\TaskManagementSystem.Application\TaskManagementSystem.Application.csproj", "{696B7A17-A220-4373-BA86-3C557AB9A6FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementSystem.Infrastructure", "src\TaskManagementSystem.Infrastructure\TaskManagementSystem.Infrastructure.csproj", "{6036C1B1-CA0B-4324-8C61-2BE0DD7BE18D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagementSystem.Infrastructure", "src\TaskManagementSystem.Infrastructure\TaskManagementSystem.Infrastructure.csproj", "{6036C1B1-CA0B-4324-8C61-2BE0DD7BE18D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementSystem.API", "src\TaskManagementSystem.API\TaskManagementSystem.API.csproj", "{126C881E-8B6B-40E1-8827-0A101BD7AA86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagementSystem.API", "src\TaskManagementSystem.API\TaskManagementSystem.API.csproj", "{126C881E-8B6B-40E1-8827-0A101BD7AA86}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E653CB61-616C-42F7-A42E-DDFB6962F4AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementSystem.UnitTests", "tests\TaskManagementSystem.UnitTests\TaskManagementSystem.UnitTests.csproj", "{4743DD0F-7713-4541-B44A-18B603B2DE49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagementSystem.UnitTests", "tests\TaskManagementSystem.UnitTests\TaskManagementSystem.UnitTests.csproj", "{4743DD0F-7713-4541-B44A-18B603B2DE49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementSystem.IntegrationTests", "tests\TaskManagementSystem.IntegrationTests\TaskManagementSystem.IntegrationTests.csproj", "{47F55CF8-26F4-4CF2-8508-E6BADDE21E38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagementSystem.IntegrationTests", "tests\TaskManagementSystem.IntegrationTests\TaskManagementSystem.IntegrationTests.csproj", "{47F55CF8-26F4-4CF2-8508-E6BADDE21E38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5FDD0B2A-AF66-46D3-90B8-5A9DE4CEB343}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{32BDB436-4CF2-4B6B-AD26-F59846B4F08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -53,6 +55,9 @@ Global
 		{47F55CF8-26F4-4CF2-8508-E6BADDE21E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47F55CF8-26F4-4CF2-8508-E6BADDE21E38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{32BDB436-4CF2-4B6B-AD26-F59846B4F08E} = {4DAF24FC-F4A2-49B4-B67E-DB1FEDD48517}
 		{696B7A17-A220-4373-BA86-3C557AB9A6FB} = {4DAF24FC-F4A2-49B4-B67E-DB1FEDD48517}
@@ -60,5 +65,8 @@ Global
 		{126C881E-8B6B-40E1-8827-0A101BD7AA86} = {4DAF24FC-F4A2-49B4-B67E-DB1FEDD48517}
 		{4743DD0F-7713-4541-B44A-18B603B2DE49} = {E653CB61-616C-42F7-A42E-DDFB6962F4AA}
 		{47F55CF8-26F4-4CF2-8508-E6BADDE21E38} = {E653CB61-616C-42F7-A42E-DDFB6962F4AA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {100CC5CE-7F6C-4B77-86E5-C52AEBA10EFB}
 	EndGlobalSection
 EndGlobal
