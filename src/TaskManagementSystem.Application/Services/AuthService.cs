@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -89,9 +90,31 @@ namespace TaskManagementSystem.Application.Services
 
             var result = await _userManager.CreateAsync(user, registerDto.Password);
             if (!result.Succeeded)
-                throw new Exception($"User creation failed: {string.Join(", ", result.Errors)}");
+            {
+                // ✅ Build a user-friendly error message
+                var errorMessages = new List<string>();
+                foreach (var error in result.Errors)
+                {
+                    var friendlyMessage = error.Code switch
+                    {
+                        "PasswordTooShort" => "Password must be at least 6 characters long.",
+                        "PasswordRequiresNonAlphanumeric" => "Password must contain at least one special character (e.g., !@#$%^&*).",
+                        "PasswordRequiresDigit" => "Password must contain at least one digit (0-9).",
+                        "PasswordRequiresUpper" => "Password must contain at least one uppercase letter (A-Z).",
+                        "PasswordRequiresLower" => "Password must contain at least one lowercase letter (a-z).",
+                        "DuplicateEmail" => "This email is already registered.",
+                        "DuplicateUserName" => "This username is already taken.",
+                        _ => error.Description ?? error.Code
+                    };
+                    errorMessages.Add(friendlyMessage);
+                }
 
-            // Assign default role
+                var combinedErrors = string.Join(" ", errorMessages);
+                Log.Error("User creation failed: {Errors}", combinedErrors);
+                throw new Exception(combinedErrors);
+            }
+
+            // Assign role
             var role = string.IsNullOrEmpty(registerDto.Role) ? "User" : registerDto.Role;
             await _userManager.AddToRoleAsync(user, role);
 
@@ -103,7 +126,6 @@ namespace TaskManagementSystem.Application.Services
             user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
             await _userManager.UpdateAsync(user);
 
-            // Get user roles
             var roles = await _userManager.GetRolesAsync(user);
 
             return new AuthResponseDto
@@ -171,7 +193,7 @@ namespace TaskManagementSystem.Application.Services
         {
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id),
+                new Claim("user_id", user.Id),  // ✅ Use the GUID directly
                 new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
                 new Claim(ClaimTypes.Name, user.FullName ?? user.Email ?? string.Empty)
             };
