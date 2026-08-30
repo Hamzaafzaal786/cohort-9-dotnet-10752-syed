@@ -89,6 +89,7 @@ namespace TaskManagementSystem.API.Controllers
 
         // POST: api/tasks
         [HttpPost]
+        [HttpPost]
         public async Task<IActionResult> CreateTask([FromBody] CreateTaskDto createTaskDto)
         {
             try
@@ -96,16 +97,13 @@ namespace TaskManagementSystem.API.Controllers
                 var userId = GetUserId();
                 var isAdmin = IsAdmin();
 
-                // If no UserId is provided in the DTO and user is not admin,
-                // assign the task to the current user
-                if (string.IsNullOrEmpty(createTaskDto.UserId) && !isAdmin)
+                // ✅ Non-admin users can ONLY create tasks for themselves
+                if (!isAdmin)
                 {
                     createTaskDto.UserId = userId;
                 }
-
-                // If admin assigns to someone else, use that userId
-                // If admin leaves it blank, assign to self
-                if (isAdmin && string.IsNullOrEmpty(createTaskDto.UserId))
+                // ✅ Admin can assign to others, or default to self
+                else if (isAdmin && string.IsNullOrEmpty(createTaskDto.UserId))
                 {
                     createTaskDto.UserId = userId;
                 }

@@ -132,8 +132,12 @@ namespace TaskManagementSystem.Application.Services
             task.Priority = updateTaskDto.Priority;
             task.DueDate = updateTaskDto.DueDate;
             task.Category = updateTaskDto.Category;
-            task.UserId = updateTaskDto.UserId ?? task.UserId;
             task.UpdatedAt = DateTime.UtcNow;
+
+            if (!string.IsNullOrEmpty(updateTaskDto.UserId))
+            {
+                task.UserId = updateTaskDto.UserId;
+            }
 
             await _unitOfWork.Tasks.UpdateAsync(task);
             await _unitOfWork.CompleteAsync();
