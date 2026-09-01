@@ -76,7 +76,7 @@ namespace TaskManagementSystem.API.Controllers
             catch (Exception ex)
             {
                 Log.Error(ex, "Error refreshing token");
-                return Unauthorized(new { message = ex.Message });
+                return Unauthorized(new { message = "Invalid or expired refresh token." });
             }
         }
 

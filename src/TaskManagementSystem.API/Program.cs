@@ -8,6 +8,18 @@ using TaskManagementSystem.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Validate required environment variables
+var jwtSecret = Environment.GetEnvironmentVariable("JWT_SECRET")
+                ?? throw new InvalidOperationException("JWT_SECRET environment variable is not set");
+
+var dbConnection = Environment.GetEnvironmentVariable("DB_CONNECTION")
+                   ?? builder.Configuration.GetConnectionString("DefaultConnection")
+                   ?? throw new InvalidOperationException("DB_CONNECTION is not set");
+
+// Override configuration with environment variables
+builder.Configuration["JwtSettings:Secret"] = jwtSecret;
+builder.Configuration["ConnectionStrings:DefaultConnection"] = dbConnection;
+
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)

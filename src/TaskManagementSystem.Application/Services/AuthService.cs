@@ -115,8 +115,8 @@ namespace TaskManagementSystem.Application.Services
             }
 
             // Assign role
-            var role = string.IsNullOrEmpty(registerDto.Role) ? "User" : registerDto.Role;
-            await _userManager.AddToRoleAsync(user, role);
+            // ✅ Always assign "User" role for public registration
+            await _userManager.AddToRoleAsync(user, "User");
 
             // Generate tokens
             var token = await GenerateJwtToken(user);
