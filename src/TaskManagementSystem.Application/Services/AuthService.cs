@@ -115,7 +115,7 @@ namespace TaskManagementSystem.Application.Services
             }
 
             // Assign role
-            // ✅ Always assign "User" role for new registrations
+            // ✅ Always assign "User" role for public registration
             await _userManager.AddToRoleAsync(user, "User");
 
             // Generate tokens

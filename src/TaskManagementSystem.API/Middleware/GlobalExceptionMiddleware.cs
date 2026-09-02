@@ -27,18 +27,34 @@ namespace TaskManagementSystem.API.Middleware
 
         private static Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
+            // Always log the full exception
             Log.Error(exception, "An unhandled exception occurred: {Message}", exception.Message);
 
-            var response = new
+            var isDevelopment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development";
+
+            object response;
+
+            if (isDevelopment)
             {
-                StatusCode = (int)HttpStatusCode.InternalServerError,
-                Message = "An error occurred while processing your request.",
-                Detailed = exception.Message
-            };
+                response = new
+                {
+                    StatusCode = (int)HttpStatusCode.InternalServerError,
+                    Message = "An error occurred while processing your request.",
+                    Detailed = exception.Message,
+                    StackTrace = exception.StackTrace
+                };
+            }
+            else
+            {
+                response = new
+                {
+                    StatusCode = (int)HttpStatusCode.InternalServerError,
+                    Message = "An error occurred while processing your request."
+                };
+            }
 
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-
             return context.Response.WriteAsync(JsonSerializer.Serialize(response));
         }
     }

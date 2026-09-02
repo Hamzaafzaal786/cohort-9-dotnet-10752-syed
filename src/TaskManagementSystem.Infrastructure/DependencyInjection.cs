@@ -18,10 +18,35 @@ namespace TaskManagementSystem.Infrastructure
             this IServiceCollection services,
             IConfiguration configuration)
         {
-            // Add DbContext
+            // ✅ Validate connection string
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                throw new InvalidOperationException("DefaultConnection is not configured.");
+            }
+
+            // ✅ Validate JWT settings
+            var jwtSecret = configuration["JwtSettings:Secret"];
+            if (string.IsNullOrEmpty(jwtSecret) || jwtSecret == "__JWT_SECRET__")
+            {
+                throw new InvalidOperationException("JWT Secret is not configured properly.");
+            }
+
+            var issuer = configuration["JwtSettings:Issuer"];
+            if (string.IsNullOrEmpty(issuer))
+            {
+                throw new InvalidOperationException("JWT Issuer is not configured.");
+            }
+
+            var audience = configuration["JwtSettings:Audience"];
+            if (string.IsNullOrEmpty(audience))
+            {
+                throw new InvalidOperationException("JWT Audience is not configured.");
+            }
+
+            // ✅ Add DbContext
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    configuration.GetConnectionString("DefaultConnection"),
+                options.UseSqlServer(connectionString,
                     b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
             // Add Identity
