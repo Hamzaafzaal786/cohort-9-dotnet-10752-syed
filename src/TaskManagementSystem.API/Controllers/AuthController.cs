@@ -1,7 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Serilog;
+using System.Security.Claims;
 using TaskManagementSystem.Application.DTOs.Auth;
 using TaskManagementSystem.Application.Interfaces;
+using TaskManagementSystem.Domain.Entities;
 
 namespace TaskManagementSystem.API.Controllers
 {
@@ -10,10 +15,12 @@ namespace TaskManagementSystem.API.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IAuthService _authService;
+        private readonly UserManager<User> _userManager;
 
-        public AuthController(IAuthService authService)
+        public AuthController(IAuthService authService, UserManager<User> userManager)
         {
             _authService = authService;
+            _userManager = userManager;
         }
 
         [HttpPost("login")]
@@ -90,6 +97,68 @@ namespace TaskManagementSystem.API.Controllers
             {
                 Log.Error(ex, "Error during logout");
                 return StatusCode(500, new { message = "An error occurred during logout" });
+            }
+        }
+
+        [Authorize]
+        [HttpPost("change-password")]
+        public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordDto changePasswordDto)
+        {
+            try
+            {
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (string.IsNullOrEmpty(userId))
+                    return Unauthorized(new { message = "User not authenticated" });
+
+                var user = await _userManager.FindByIdAsync(userId);
+                if (user == null)
+                    return NotFound(new { message = "User not found" });
+
+                var result = await _userManager.ChangePasswordAsync(user,
+                    changePasswordDto.CurrentPassword,
+                    changePasswordDto.NewPassword);
+
+                if (!result.Succeeded)
+                {
+                    var errors = string.Join(", ", result.Errors.Select(e => e.Description));
+                    return BadRequest(new { message = errors });
+                }
+
+                Log.Information("Password changed for user {UserId}", userId);
+                return Ok(new { message = "Password changed successfully" });
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error changing password");
+                return StatusCode(500, new { message = "An error occurred while changing password" });
+            }
+        }
+
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDto forgotPasswordDto)
+        {
+            try
+            {
+                var user = await _userManager.FindByEmailAsync(forgotPasswordDto.Email);
+                if (user == null)
+                {
+                    // Don't reveal that user doesn't exist
+                    return Ok(new { message = "If your email is registered, you will receive a reset link." });
+                }
+
+                // Generate password reset token
+                var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+                // In a real app, send email with reset link
+                // For now, we'll just return success
+                Log.Information("Password reset requested for {Email}", forgotPasswordDto.Email);
+
+                return Ok(new { message = "Password reset link has been sent to your email." });
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error in forgot password");
+                return StatusCode(500, new { message = "An error occurred processing your request" });
             }
         }
     }

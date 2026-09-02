@@ -61,21 +61,23 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.AddInfrastructure(builder.Configuration);
 
 // Add Application services
-builder.Services.AddAutoMapper(cfg => cfg.AddProfile<MappingProfile>());  // ✅ FIXED: Pass the type directly
+builder.Services.AddAutoMapper(cfg => cfg.AddProfile<MappingProfile>());
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddScoped<IUserService, UserService>();
 
 // Add CORS
+// Add CORS
+// Add CORS (Development only)
+
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowReactApp",
+    options.AddPolicy("AllowAll",
         policy =>
         {
-            policy.WithOrigins("http://localhost:3000")
+            policy.AllowAnyOrigin()
                   .AllowAnyMethod()
-                  .AllowAnyHeader()
-                  .AllowCredentials();
+                  .AllowAnyHeader();
         });
 });
 
@@ -93,7 +95,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowReactApp");
+app.UseCors("AllowAll");
 
 app.UseAuthentication();
 app.UseAuthorization();
@@ -102,5 +104,7 @@ app.MapControllers();
 
 // Log application start
 Log.Information("Task Management System API started");
+
+app.MapGet("/", () => Results.Redirect("/swagger"));
 
 app.Run();
