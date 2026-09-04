@@ -1,0 +1,12 @@
+z
+qC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\Data\ApplicationDbContext.csutf-8p
+gC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\Data\UnitOfWork.csutf-8t
+kC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\DependencyInjection.csutf-8à
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\Migrations\20260812100855_InitialCreate.csutf-8î
+àC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\Migrations\20260812100855_InitialCreate.Designer.csutf-8ê
+ÑC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\Migrations\ApplicationDbContextModelSnapshot.csutf-8|
+sC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\Repositories\BaseRepository.csutf-8|
+sC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\Repositories\TaskRepository.csutf-8ß
+õC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\obj\Debug\net7.0\TaskManagementSystem.Infrastructure.GlobalUsings.g.csutf-8†
+îC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\obj\Debug\net7.0\.NETCoreApp,Version=v7.0.AssemblyAttributes.csutf-8•
+ôC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\obj\Debug\net7.0\TaskManagementSystem.Infrastructure.AssemblyInfo.csutf-8

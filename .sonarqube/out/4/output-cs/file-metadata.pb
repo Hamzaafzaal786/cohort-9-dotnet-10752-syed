@@ -1,0 +1,10 @@
+p
+gC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.API\Controllers\AuthController.csutf-8q
+hC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.API\Controllers\TasksController.csutf-8p
+gC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.API\Controllers\UserController.csutf-8z
+qC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.API\Middleware\GlobalExceptionMiddleware.csutf-8]
+TC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.API\Program.csutf-8ë
+ÖC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.API\obj\Debug\net7.0\TaskManagementSystem.API.GlobalUsings.g.csutf-8ï
+âC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.API\obj\Debug\net7.0\.NETCoreApp,Version=v7.0.AssemblyAttributes.csutf-8è
+ÉC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.API\obj\Debug\net7.0\TaskManagementSystem.API.AssemblyInfo.csutf-8¢
+ñC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.API\obj\Debug\net7.0\TaskManagementSystem.API.MvcApplicationPartsAssemblyInfo.csutf-8

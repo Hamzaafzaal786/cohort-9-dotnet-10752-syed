@@ -1,0 +1,11 @@
+j
+aC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\Common\BaseEntity.csutf-8f
+]C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\Entities\Task.csutf-8f
+]C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\Entities\User.csutf-8c
+ZC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\Enums\Role.csutf-8k
+bC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\Enums\TaskPriority.csutf-8i
+`C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\Enums\TaskStatus.csutf-8s
+jC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\Interfaces\IBaseRepository.csutf-8—
+‹C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\obj\Debug\net7.0\TaskManagementSystem.Domain.GlobalUsings.g.csutf-8˜
+ŒC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\obj\Debug\net7.0\.NETCoreApp,Version=v7.0.AssemblyAttributes.csutf-8•
+‰C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\obj\Debug\net7.0\TaskManagementSystem.Domain.AssemblyInfo.csutf-8

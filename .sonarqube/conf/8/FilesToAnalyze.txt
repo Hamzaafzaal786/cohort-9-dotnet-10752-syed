@@ -1,0 +1,13 @@
+﻿C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\Data\ApplicationDbContext.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\Data\UnitOfWork.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\DependencyInjection.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\Migrations\20260812100855_InitialCreate.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\Migrations\20260812100855_InitialCreate.Designer.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\Migrations\ApplicationDbContextModelSnapshot.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\Repositories\BaseRepository.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\Repositories\TaskRepository.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\TaskManagementSystem.Infrastructure\obj\project.assets.json
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\TaskManagementSystem.Infrastructure\obj\project.nuget.cache
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\TaskManagementSystem.Infrastructure\obj\TaskManagementSystem.Infrastructure.csproj.nuget.dgspec.json
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\TaskManagementSystem.Infrastructure\obj\TaskManagementSystem.Infrastructure.csproj.nuget.g.props
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Infrastructure\TaskManagementSystem.Infrastructure\obj\TaskManagementSystem.Infrastructure.csproj.nuget.g.targets

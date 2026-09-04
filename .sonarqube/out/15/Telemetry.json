@@ -1,0 +1,11 @@
+﻿{"dotnetenterprise.s4net.build.override_warnings_as_errors.cnt":"true"}
+{"dotnetenterprise.s4net.build.target_framework_moniker":".NETCoreApp,Version=v7.0"}
+{"dotnetenterprise.s4net.build.using_microsoft_net_sdk.cnt":"true"}
+{"dotnetenterprise.s4net.build.deterministic.cnt":"true"}
+{"dotnetenterprise.s4net.build.nuget_project_style.cnt":"PackageReference"}
+{"dotnetenterprise.s4net.build.netcore_sdk_version.cnt":"8.0.424"}
+{"dotnetenterprise.s4net.build.dependencies.automapper.cnt":"true"}
+{"dotnetenterprise.s4net.build.dependencies.fluentvalidation.cnt":"true"}
+{"dotnetenterprise.s4net.build.dependencies.mediatr.cnt":"true"}
+{"dotnetenterprise.s4net.build.dependencies.microsoft_identitymodel_tokens.cnt":"true"}
+{"dotnetenterprise.s4net.build.dependencies.system_identitymodel_tokens_jwt.cnt":"true"}

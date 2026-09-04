@@ -1,0 +1,17 @@
+﻿C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\Controllers\TasksControllerTests.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\GlobalUsings.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\Helpers\DatabaseContextFactory.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\Repositories\TaskRepositoryTests.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\Services\AuthServiceTests.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\Services\TaskServiceTests.cs
+C:\Users\wajiz.pk\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.cs
+C:\Users\wajiz.pk\.nuget\packages\microsoft.testplatform.testhost\17.8.0\build\netcoreapp3.1\x64\testhost.exe
+C:\Users\wajiz.pk\.nuget\packages\microsoft.testplatform.testhost\17.8.0\build\netcoreapp3.1\x64\testhost.dll
+C:\Users\wajiz.pk\.nuget\packages\xunit.runner.visualstudio\2.5.6\build\net6.0\xunit.runner.visualstudio.testadapter.dll
+C:\Users\wajiz.pk\.nuget\packages\xunit.runner.visualstudio\2.5.6\build\net6.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\wajiz.pk\.nuget\packages\xunit.runner.visualstudio\2.5.6\build\net6.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\TaskManagementSystem.UnitTests\obj\project.assets.json
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\TaskManagementSystem.UnitTests\obj\project.nuget.cache
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\TaskManagementSystem.UnitTests\obj\TaskManagementSystem.UnitTests.csproj.nuget.dgspec.json
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\TaskManagementSystem.UnitTests\obj\TaskManagementSystem.UnitTests.csproj.nuget.g.props
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\TaskManagementSystem.UnitTests\obj\TaskManagementSystem.UnitTests.csproj.nuget.g.targets

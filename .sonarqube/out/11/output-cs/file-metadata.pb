@@ -1,0 +1,11 @@
+~
+uC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\Controllers\TasksControllerTests.csutf-8j
+aC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\GlobalUsings.csutf-8|
+sC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\Helpers\DatabaseContextFactory.csutf-8~
+uC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\Repositories\TaskRepositoryTests.csutf-8w
+nC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\Services\AuthServiceTests.csutf-8w
+nC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\Services\TaskServiceTests.csutf-8Ä
+uC:\Users\wajiz.pk\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.csutf-8ü
+ìC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\obj\Debug\net7.0\TaskManagementSystem.UnitTests.GlobalUsings.g.csutf-8ù
+ëC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\obj\Debug\net7.0\.NETCoreApp,Version=v7.0.AssemblyAttributes.csutf-8ù
+ëC:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\tests\TaskManagementSystem.UnitTests\obj\Debug\net7.0\TaskManagementSystem.UnitTests.AssemblyInfo.csutf-8

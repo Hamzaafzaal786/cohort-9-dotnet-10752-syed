@@ -1,0 +1,12 @@
+﻿C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\Common\BaseEntity.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\Entities\Task.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\Entities\User.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\Enums\Role.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\Enums\TaskPriority.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\Enums\TaskStatus.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\Interfaces\IBaseRepository.cs
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\TaskManagementSystem.Domain\obj\project.assets.json
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\TaskManagementSystem.Domain\obj\project.nuget.cache
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\TaskManagementSystem.Domain\obj\TaskManagementSystem.Domain.csproj.nuget.dgspec.json
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\TaskManagementSystem.Domain\obj\TaskManagementSystem.Domain.csproj.nuget.g.props
+C:\Users\wajiz.pk\cohort-9-dotnet-10752-syed\src\TaskManagementSystem.Domain\TaskManagementSystem.Domain\obj\TaskManagementSystem.Domain.csproj.nuget.g.targets
