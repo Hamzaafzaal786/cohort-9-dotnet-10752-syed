@@ -3,8 +3,11 @@
     "TaskManagementSystem.API": {
       "commandName": "Project",
       "launchBrowser": true,
+      "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "JWT_SECRET": "this-is-a-very-long-secret-key-for-development-only-min-32-characters",
+        "DB_CONNECTION": "Server=SYED-HAMZA-AFZA\\SQLEXPRESS;Database=TaskManagementDB_Dev;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true"
       },
       "applicationUrl": "https://localhost:52994;http://localhost:52995"
     }

@@ -10,7 +10,8 @@ import {
   FaSave,
   FaTimes,
   FaShieldAlt,
-  FaCheckCircle
+  FaCheckCircle,
+  FaExclamationTriangle
 } from 'react-icons/fa';
 import API from '../services/api';
 
@@ -31,13 +32,21 @@ const Profile = () => {
     setError('');
     setMessage('');
 
+    // ✅ Check if passwords match
     if (newPassword !== confirmPassword) {
-      setError('New passwords do not match');
+      setError('❌ New passwords do not match');
       return;
     }
 
+    // ✅ Check password length
     if (newPassword.length < 6) {
-      setError('Password must be at least 6 characters');
+      setError('❌ Password must be at least 6 characters');
+      return;
+    }
+
+    // ✅ Check current password is not empty
+    if (!currentPassword) {
+      setError('❌ Please enter your current password');
       return;
     }
 
@@ -48,16 +57,37 @@ const Profile = () => {
         currentPassword,
         newPassword
       });
-      setMessage('Password changed successfully!');
+      
+      // ✅ Success message
+      setMessage('✅ Password changed successfully!');
       setCurrentPassword('');
       setNewPassword('');
       setConfirmPassword('');
-      setShowPasswordForm(false);
       
       // Auto-hide success message after 5 seconds
       setTimeout(() => setMessage(''), 5000);
     } catch (err) {
-      setError(err.response?.data?.message || 'Failed to change password');
+      // ✅ Show error from backend
+      const errorMsg = err.response?.data?.message || 'Failed to change password';
+      
+      if (errorMsg.includes('Incorrect password') || errorMsg.includes('current password')) {
+        setError('❌ Current password is incorrect');
+      } else if (errorMsg.includes('PasswordTooShort')) {
+        setError('❌ Password must be at least 6 characters');
+      } else if (errorMsg.includes('PasswordRequiresUpper')) {
+        setError('❌ Password must contain at least one uppercase letter');
+      } else if (errorMsg.includes('PasswordRequiresLower')) {
+        setError('❌ Password must contain at least one lowercase letter');
+      } else if (errorMsg.includes('PasswordRequiresDigit')) {
+        setError('❌ Password must contain at least one number');
+      } else if (errorMsg.includes('PasswordRequiresNonAlphanumeric')) {
+        setError('❌ Password must contain at least one special character (!@#$%^&*)');
+      } else {
+        setError('❌ ' + errorMsg);
+      }
+      
+      // Auto-hide error after 5 seconds
+      setTimeout(() => setError(''), 5000);
     } finally {
       setLoading(false);
     }
@@ -157,8 +187,33 @@ const Profile = () => {
             </div>
           ) : (
             <form onSubmit={handleChangePassword} className="password-form">
-              {message && <div className="auth-success">{message}</div>}
-              {error && <div className="auth-error">{error}</div>}
+              {/* ✅ Success Message */}
+              {message && (
+                <div className="auth-success" style={{ 
+                  background: '#E8F5E9', 
+                  color: '#1B5E20', 
+                  padding: '12px 16px', 
+                  borderRadius: '12px', 
+                  marginBottom: '16px',
+                  borderLeft: '4px solid #00C9A7'
+                }}>
+                  {message}
+                </div>
+              )}
+              
+              {/* ✅ Error Message */}
+              {error && (
+                <div className="auth-error" style={{ 
+                  background: '#FBE9E7', 
+                  color: '#BF360C', 
+                  padding: '12px 16px', 
+                  borderRadius: '12px', 
+                  marginBottom: '16px',
+                  borderLeft: '4px solid #FF6B6B'
+                }}>
+                  {error}
+                </div>
+              )}
 
               <div className="form-group">
                 <label htmlFor="currentPassword">Current Password</label>
@@ -218,6 +273,9 @@ const Profile = () => {
                     setShowPasswordForm(false);
                     setError('');
                     setMessage('');
+                    setCurrentPassword('');
+                    setNewPassword('');
+                    setConfirmPassword('');
                   }}
                 >
                   <FaTimes />

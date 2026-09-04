@@ -106,7 +106,15 @@ namespace TaskManagementSystem.API.Controllers
         {
             try
             {
-                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                // ✅ Use the same method as TasksController
+                var userId = User.FindFirst("user_id")?.Value;
+
+                if (string.IsNullOrEmpty(userId))
+                {
+                    // ✅ Fallback to NameIdentifier
+                    userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                }
+
                 if (string.IsNullOrEmpty(userId))
                     return Unauthorized(new { message = "User not authenticated" });
 
